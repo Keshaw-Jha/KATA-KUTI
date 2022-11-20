@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Fredoka+One&family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-image: radial-gradient( circle 1094px at 5.2% 51.6%,  rgb(78 83 255) 0%, rgba(7,3,53,1) 97.5% )
+}
+
+nav ul{
+    float: none;
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    animation-duration: 1.5s;
+    animation-name: heading;
+    animation-iteration-count: infinite;
+    border-radius: 50px;
+    text-align: center;
+    text-shadow: 0 0 5px rgb(0, 195, 221), 0 0 10px rgb(0, 186, 233), 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+    box-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #f0F, 0 0 20px #f0F, 0 0 25px #f00, 0 0 30px #f00, 0 0 35px #09f;
+}
+
+nav{
+    color: white;
+    height: 17vmin;
+    font-family: 'Fredoka One', cursive;
+    font-size: 8vmin;
+    position: relative;
+}
+
+.score{
+    height: 17vmin;
+    width: 20%;
+   text-align: center;
+   font-size: 7vmin;
+   text-shadow: 0.1em 0.1em 0 hsl(191deg 48% 46%);
+}
+
+.gameContainer{
+    background-image: linear-gradient( 109.6deg,  rgba(61,237,253,1) 44.2%, rgba(3,136,238,1) 95.6% );
+    display: flex;
+    justify-content:center;
+    padding: 30px  0px;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Fredoka One', cursive;
+    
+}
+
+.boxtext{
+    color: white;
+    text-shadow: 0.1em 0.1em 0 hsl(191deg 48% 46%);
+}
+
+.box{
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 9vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box:hover{
+    background-color: rgba(39, 129, 202, 0.438);
+}
+
+.gameInfo{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.imgbox img{
+    width: 0px;
+    transition: width 0.5s ease-in-out;
+    animation-duration: 1.5s;
+    animation-name: heading;
+    animation-iteration-count: infinite;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #f0F, 0 0 20px #f0F, 0 0 25px #f00, 0 0 30px #f00, 0 0 35px #09f;
+}
+
+.imgbox{
+    width: 350px;
+    margin-top: 30px;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    padding: 2px 7px;
+    border-radius: 7px;
+    background-color: turquoise;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 1vw;
+    
+}
+
+
+.info{
+    margin-right: 10px;
+    display: inline-block;
+    width: 85px;
+    text-align: center;
+}
+
+/*animations*/
+@keyframes heading {
+    0%{border-top:   5px solid  #ff0;
+        border-right:  5px solid #f0F;
+        border-bottom: 5px solid #f00;
+        border-left:  5px solid  #09f;}
+    25%{border-top:   5px solid  #09f; 
+        border-right: 5px solid  #ff0; 
+        border-bottom: 5px solid #f0F; 
+        border-left:   5px solid #f00;}
+    50%{border-top:    5px solid #f00;
+        border-right: 5px solid  #09f; 
+        border-bottom:5px solid  #ff0;
+        border-left:   5px solid #f0F; }
+    75%{border-top:   5px solid #f0F;
+        border-right:    5px solid #f00;
+        border-bottom: 5px solid  #09f; 
+        border-left:5px solid  #ff0;}
+    100%{border-top:5px solid  #ff0;   
+        border-right: 5px solid #f0F;   
+        border-bottom: 5px solid #f00;  
+        border-left:5px solid  #09f;}
+}
+
+
+
+
+
+@media screen and (max-width: 800px)
+{
+  
+    nav{
+        height: 10vh;
+    }
+    nav ul{
+        width: 70%;
+    }
+    
+    .gameContainer{
+        flex-wrap: wrap;   
+        height: 70vh;
+       
+    }
+    .gameInfo{
+        margin: 7vw;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+        font-family: 'Fredoka One', cursive;
+    }
+    h1{
+        text-align: center;
+        font-size:6vw;
+    }
+    
+    #reset{
+        width:40%;
+        margin-left: 30%;
+        font-size: 8px;
+        font-weight: bolder;
+    }
+
+    .btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .imgbox{
+      justify-content: center;  
+      width:200px;
+      height: 145px;
+    }
+
+    body{
+        max-width: 100vw;
+        max-height: 100vh;
+        zoom:100%;
+    }
+
+    .score{
+        width: 15%;
+        text-align: center;
+        font-size: 7vmin;
+        top: 12vh;
+        position: absolute;
+    }
+}
